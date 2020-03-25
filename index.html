@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Product app</title>
 </head>
 <body>
+ <div class="nav-bar"></div>
     <div id="app">
-        <h1>{{ product }}</h1>
-
+       <div class="product">
+            <div class="product-image">
+                <img v-bind:src="image">
+            </div>
+            <div class="product-info">
+                <h1>{{ product }}</h1>
+                <a :href="link">link</a>
+            </div>
+       </div>
     </div>
  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>   
  <script src="main.js"></script> 
